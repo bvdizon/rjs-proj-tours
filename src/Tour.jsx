@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Tour = ({ id, image, info, name, price, removeTour }) => {
-  const [readMore, setReadMore] = useState(false);
+  const [readMore, setReadMore] = useState(false); // State to manage whether to show full or truncated information
 
   return (
     <article className='single-tour'>

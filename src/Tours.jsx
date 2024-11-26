@@ -1,6 +1,8 @@
 import Tour from './Tour';
 
 const Tours = ({ tours, removeTour }) => {
+  // Props for receiving tours data and removeTour function
+
   return (
     <section>
       <div className='title'>
@@ -8,12 +10,13 @@ const Tours = ({ tours, removeTour }) => {
         <div className='title-underline'></div>
       </div>
       <div className='tours'>
+        {/* Map over the tours array and render individual Tour components */}
         {tours.map((tour) => {
-          console.log(tour);
           return <Tour key={tour.id} {...tour} removeTour={removeTour} />;
         })}
       </div>
     </section>
   );
 };
+
 export default Tours;
